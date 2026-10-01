@@ -1,0 +1,34 @@
+---
+title: Coughs, clicks and bumps
+description: Options for removing audience and stage noises.
+sidebar:
+  order: 2
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+Live recordings always have some audience noise. Fix the ones that **distract on a second listen** and leave the rest.
+
+<Tabs>
+  <TabItem label="Volume dip">
+    Draw a short volume-automation dip (−3 to −10 dB) over the cough.
+    - ✅ Quick, built into Logic, and enough for most coughs during loud passages.
+    - ❌ Audible in quiet passages because the singing dips too.
+  </TabItem>
+  <TabItem label="Edit & crossfade">
+    If a phrase repeats (e.g. a verse or chorus), or the noise falls in a pause, **copy clean audio** over it with a crossfade. Room tone can fill pauses.
+    - ✅ Free and invisible when it works.
+    - ❌ Only works when matching material exists.
+  </TabItem>
+  <TabItem label="Spectral repair">
+    Paint the cough out of a spectrogram, leaving the voices.
+    - **iZotope RX** (Elements / Standard): the industry standard. *Spectral De-noise*, *Mouth De-click* and *Spectral Repair* (Standard).
+    - **Steinberg SpectraLayers**: a strong alternative with similar spectral editing.
+    - **Acon Digital Restoration Suite**: cheaper, with De-click and De-noise.
+    - ✅ Near-magic on coughs over sustained chords.
+    - ❌ Costs money and has a learning curve. Use it as an external editor alongside Logic.
+  </TabItem>
+</Tabs>
+
+## To learn
+- [ ] Count how many problem noises are in the chosen songs before buying anything.

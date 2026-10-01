@@ -1,0 +1,33 @@
+---
+title: Rumble and noise
+description: Removing low-frequency rumble and steady background noise.
+sidebar:
+  order: 1
+---
+
+import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
+
+## Rumble (do this always)
+Low-frequency rumble from traffic, HVAC, footsteps and handling eats headroom and muddies the sound.
+
+- Add **Channel EQ** with the **high-pass filter** on, at **60–80 Hz**, slope 12–24 dB/oct.
+- Listen to the basses' lowest notes. Raise the frequency until they start to thin, then back off.
+- If the sE8s' 80 Hz HPF was on at the gig, you may need little or none.
+
+## Steady noise (hiss, air con, fridge hum)
+
+<Tabs>
+  <TabItem label="Leave it">
+    Small amounts of room noise read as "live" and get masked by singing and reverb. **Try this first.**
+  </TabItem>
+  <TabItem label="Gentle broadband NR">
+    Use a noise-reduction plugin that learns a noise profile from **room tone** (another reason to record it).
+    - Free or cheap: Logic has no dedicated NR. Options include **Acon Digital DeNoise**, **Waves NS1/Clarity**, and **iZotope RX Elements**.
+    - Be gentle: 3–6 dB reduction. Too much causes "underwater" artefacts on the reverb tail.
+  </TabItem>
+  <TabItem label="Hum notch">
+    Mains hum at **50 Hz** (UK/EU) plus harmonics: narrow Channel EQ notches at 50, 100 and 150 Hz. Only do this if you can hear it.
+  </TabItem>
+</Tabs>
+
+<Aside type="tip">Noise reduction always goes **before** reverb and compression in the chain.</Aside>

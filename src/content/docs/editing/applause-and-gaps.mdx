@@ -1,0 +1,32 @@
+---
+title: Applause and gaps
+description: Options for how each song starts and ends.
+sidebar:
+  order: 2
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+How a song starts and ends sets the tone: does it sound like a *live record* or a *clean track*?
+
+<Tabs>
+  <TabItem label="Fade out the applause">
+    Let the last chord ring out and the room decay, then **fade in 2–4 s** as the applause starts.
+    - ✅ Keeps the live energy without overstaying it. Good for YouTube or the website.
+  </TabItem>
+  <TabItem label="Cut before applause">
+    End at the natural decay, just before the first clap. Use **room tone** to extend the tail if the applause starts too soon.
+    - ✅ A clean "studio-like" track for streaming.
+    - ❌ Hard if applause overlaps the final chord.
+  </TabItem>
+  <TabItem label="Keep full applause">
+    The whole applause, with a fade at the end.
+    - ✅ A full live document. Good for the group's own archive.
+  </TabItem>
+</Tabs>
+
+## Starts
+Start on silence or room tone about 0.5–1 s before the first breath or pitch note. Cut the announcements and pitch-pipe *unless* they add charm.
+
+## To learn
+- [ ] Decide a house style for Ascolta releases (mark ✅ here once chosen).

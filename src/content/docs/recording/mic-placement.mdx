@@ -1,0 +1,45 @@
+---
+title: Mic placement
+description: Stereo techniques for a small a cappella group, and what the current 90° setup is.
+sidebar:
+  order: 2
+---
+
+import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
+
+Current setup: **two sE8s on one stand, a few metres from the singers, angled about 90° apart.**
+If the capsules nearly touch, that's an **XY** pair. If they're about 17 cm apart, it's closer to **ORTF**. Check this next time, because it changes how the stereo image sounds.
+
+<Tabs>
+  <TabItem label="XY (coincident)">
+    Capsules touching, one above the other, angled **90–135°**.
+    - ✅ Mono-compatible and focused, with no phasing problems.
+    - ❌ Can sound narrow. At 90° the group bunches into the centre.
+    - 💡 Try **110–120°** to widen the image, or move closer.
+  </TabItem>
+  <TabItem label="ORTF (near-coincident)">
+    Capsules **17 cm apart**, angled **110°** outward.
+    - ✅ A wider, more "airy" image than XY, with a natural sense of space. A common choice for choirs.
+    - ❌ Slightly less mono-solid, though fine in practice.
+    - 💡 Needs a stereo bar (cheap) on the stand.
+  </TabItem>
+  <TabItem label="Spaced pair (AB)">
+    Two mics **60 cm–1 m+ apart**, both facing the group.
+    - ✅ Very wide and spacious, with good low end.
+    - ❌ Vague centre image and phase issues in mono. Usually needs two stands.
+  </TabItem>
+</Tabs>
+
+## Distance and height
+
+- **Distance**: the critical distance is where the direct sound equals the room's reverb. Closer gives a drier, clearer sound with less room. For 8 singers, 2–4 m is typical. Adding reverb later is easy, removing it is impossible, so **err slightly close**.
+- **Height**: raise the mics above the singers' heads (about 2.5–3 m), aimed down at the middle of the group. This evens out front and back rows and gets above the audience.
+- **Centre** the stand on the group, not on the room.
+
+<Aside type="tip">
+Clap once in front of the mics at the start. It makes a clean sync point and a quick check on the stereo image (the clap should sit dead centre).
+</Aside>
+
+## To learn
+- [ ] Note which technique was actually used for each concert in the concert log.
+- [ ] Experiment: XY 90° vs ORTF at a rehearsal and compare.

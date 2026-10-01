@@ -1,0 +1,40 @@
+---
+title: Ascolta Audio Workflow
+description: Turning live concert recordings into finished songs, from recorder to release.
+template: splash
+hero:
+  tagline: How Ascolta records and edits its live concerts, from Zoom H5essential to Logic Pro to finished songs. The process changes over time, and so does this site.
+  actions:
+    - text: Start with recording
+      link: recording/gear/
+      icon: right-arrow
+    - text: How to use this site
+      link: how-to-use-this-site/
+      variant: minimal
+---
+
+import { Card, CardGrid, Steps } from '@astrojs/starlight/components';
+
+## The pipeline
+
+<Steps>
+1. **Record**: a stereo pair of sE8s into the H5essential, 32-bit float. [Recording →](recording/gear/)
+2. **Ingest**: back up, rename, and import into a Logic project. [Ingest →](ingest/files-and-backups/)
+3. **Select & cut**: mark each song, then cut it out with handles. [Editing →](editing/finding-songs/)
+4. **Clean up**: remove rumble, coughs, clicks and noise. [Clean-up →](cleanup/rumble-and-noise/)
+5. **Tone & balance**: EQ, gentle dynamics, stereo image. [Tone →](tone/eq-for-choir/)
+6. **Space**: add reverb that flatters the voices without washing them out. [Reverb →](reverb/why-and-how-much/)
+7. **Loudness & export**: set the final level, then bounce masters and share copies. [Export →](export/loudness/)
+8. **Log it**: write down what worked in the [concert log](concerts/template/) and the [changelog](reference/changelog/).
+</Steps>
+
+## Current focus
+
+<CardGrid>
+  <Card title="Two concerts to edit" icon="seti:audio">
+    Two 60-minute stereo recordings, with 3–5 songs to pull from each. Progress is tracked in the concert log.
+  </Card>
+  <Card title="Choosing a reverb" icon="star">
+    Shortlist, prices and a repeatable A/B test are on [third-party reverb options](reverb/third-party-options/).
+  </Card>
+</CardGrid>

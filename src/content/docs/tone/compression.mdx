@@ -1,0 +1,27 @@
+---
+title: Dynamics and compression
+description: Options for controlling level in a dynamic choral performance.
+sidebar:
+  order: 2
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+A cappella relies on dynamics. Over-compressing flattens the musicality. The aim is to keep quiet passages audible on a phone speaker without squashing the climaxes.
+
+<Tabs>
+  <TabItem label="No compression">
+    Just set the overall level and limit peaks at the end (see [Loudness](/logic-choir-workflow/export/loudness/)).
+    - ✅ The most natural sound. A good default for classical-style repertoire.
+  </TabItem>
+  <TabItem label="Riding gain (automation)">
+    Use volume automation to lift very quiet sections by 1–3 dB, or tame a sudden fortissimo.
+    - ✅ Musical, because you decide where. The classical engineer's approach.
+    - ❌ Takes time, but songs are short.
+  </TabItem>
+  <TabItem label="Gentle bus compression">
+    Logic **Compressor**, *Classic VCA* or *Platinum Digital*: ratio **1.5–2:1**, slow attack (30 ms+), auto or medium release, **1–3 dB** of gain reduction at the loudest points.
+    - ✅ Glues the sound and is quick.
+    - ❌ Easy to overdo, and it brings up audience noise in quiet bits.
+  </TabItem>
+</Tabs>

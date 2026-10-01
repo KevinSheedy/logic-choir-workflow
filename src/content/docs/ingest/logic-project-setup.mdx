@@ -1,0 +1,27 @@
+---
+title: Logic project setup
+description: Creating the Logic project, importing 32-bit float audio and setting levels.
+sidebar:
+  order: 2
+---
+
+import { Steps, Aside } from '@astrojs/starlight/components';
+
+<Steps>
+1. **New empty project**, saved into `01_logic/`. In *File → Project Settings → Audio*, set the **sample rate to match the recording** (check the WAV's info, usually 48 kHz). Set *Project Settings → Assets* to **copy audio files into project**.
+2. **Import** the stereo WAV by dragging it onto a new stereo audio track. If the recorder made two mono files (L and R), import both, pan them hard left and right, or merge them into a stereo file.
+3. **Check the level.** A 32-bit float file may peak above 0 dBFS or sit very low. Use **non-destructive region gain**: select the region, then in the Region inspector set *Gain*, or use *Functions → Normalize Region Gain*. Aim for peaks around **−6 dBFS** on the loudest song, which leaves headroom for processing.
+4. **Mark the songs.** Play through (or skim the waveform) and add a **marker** at the start of each song you might use (`Option`‑`'` adds a marker at the playhead). Rename the markers with song titles.
+5. **Save as a template.** Once the channel strip (EQ, reverb send etc.) settles down, use *File → Save as Template…* so the next concert starts from it.
+</Steps>
+
+<Aside type="tip">
+Logic processes audio internally in floating point, so a channel showing red above 0 dB isn't harmful *inside* the mix. It only clips when it reaches the output or a bounce. Keeping peaks around −6 dBFS is still a good habit, because plugins behave more predictably there.
+</Aside>
+
+## Project per concert, or one per song?
+Use **one project per concert**, with songs as sections of the timeline (or separate projects bounced from it). One project means one set of processing to tweak and consistent sound across songs. Revisit this choice after the first two concerts.
+
+## To learn
+- [ ] Confirm the exact menu path for Normalize Region Gain in the current Logic version.
+- [ ] Build the first template channel strip.
