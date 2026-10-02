@@ -1,0 +1,86 @@
+---
+title: Off-centre performers
+description: Fixing songs where the singers moved (e.g. to the piano) but the mics didn't.
+sidebar:
+  order: 4
+---
+
+import { Steps, Tabs, TabItem, Aside } from '@astrojs/starlight/components';
+
+**The situation:** for three songs with grand piano, the choir moved to the piano, far over to the right of the church. The mic stand stayed where it was, aimed at the original centre position.
+
+## What that does to the recording
+
+| Symptom | Why | What you'll hear |
+|---|---|---|
+| **Image shifted right** | The group is now well off to the right of the mics' axis | Choir and piano bunched on the right. The left channel is mostly room echo |
+| **Duller tone** | Cardioid mics lose treble off-axis (the sE8 is aimed elsewhere) | Less consonant clarity and "air" |
+| **More distant / reverberant** | Further from the mics, so the room is louder relative to the voices | Washier, less defined, quieter |
+| **Lower level** | More distance | 3–6 dB quieter than the centre songs (measure it) |
+| **Piano/choir balance** | The piano may now be closer to the mics than the singers, or vice versa | Piano possibly too loud or too soft. Hard to fix after the fact |
+
+The aim is **not** to make these songs sound identical to the others. They were genuinely in a different spot, and a little contrast is nice. The aim is to make them **sound intentional**: roughly centred, clear, and at a similar loudness.
+
+## Plan
+
+<Steps>
+1. **Diagnose first.** Mark the three songs and cycle a representative passage from each. Compare with a centre-position song at the same loudness. On the Stereo Out, insert **Level Meter** (or **MultiMeter**) and the **Correlation Meter**. Note how many dB louder R is than L, and whether correlation drops towards 0 (more room, less direct sound). Record the numbers in the concert log.
+
+2. **Put the three songs on their own track.** Duplicate the concert track (or move those regions to a new track) so they get their **own channel strip**, while still sending to the same reverb bus as the other songs. Name it something like `Piano set`.
+
+3. **Re-centre the image.** Pick one option below. Start with the Direction Mixer. Aim for the group **slightly right of centre** (it was really there, and that's fine), not hard right.
+
+4. **Restore the top end.** Use Channel EQ with a high shelf of **+1.5 to +3 dB from about 6 kHz**, and optionally a broad **+1–2 dB around 3 kHz** for consonants. A/B it against a centre song. Stop as soon as the clarity matches; going further brings up hiss and the room.
+
+5. **Deal with the extra room sound.** These songs already have more natural reverb, so **reduce or remove the reverb send** for this track. Try about half the send of the centre songs, then adjust by ear. Optionally try a de-reverb tool (iZotope RX *De-reverb*, Acon *DeVerberate*), but go gently because it can sound processed.
+
+6. **Match loudness.** Use region gain to bring the songs up to the centre songs' level. Judge by ear in the context of the whole set, and use the Loudness Meter as a guide (see [Loudness](/logic-choir-workflow/export/loudness/)).
+
+7. **Check piano/choir balance.** If the piano is too dominant, a gentle wide cut in the piano's body (**150–400 Hz**, −1 to −3 dB) can help, because voices sit higher. If the choir dominates, there's little to do. Note it for next time.
+
+8. **Check mono and phones.** Collapse to mono (see [Stereo width](/logic-choir-workflow/tone/stereo-width/)) and listen on a phone speaker. The re-centring shouldn't make it hollow or phasey.
+
+9. **Save the channel strip** as a patch (`Piano set – off-centre`) so the other two songs, and future gigs, start from it.
+</Steps>
+
+## Re-centring options
+
+<Tabs>
+  <TabItem label="Direction Mixer (try first)">
+    Insert **Direction Mixer** first in the chain (*Imaging → Direction Mixer*), with *Input* set to **LR**.
+    - **Direction**: rotates the whole stereo image. Turn it left (negative values) until the choir sits just right of centre. Small amounts go a long way.
+    - **Spread**: slightly below 1.0 (e.g. 0.7–0.9) narrows the image, which pulls a hard-right group towards centre and reduces the empty-left feeling.
+    - ✅ Keeps the stereo room, is quick, and suits a coincident (XY) pair best.
+    - ❌ If the pair was spaced (ORTF), the left/right timing differences remain, so it may sound a bit vague. Check in mono.
+  </TabItem>
+  <TabItem label="Stereo panner">
+    Right-click the track's pan knob and choose **Stereo Pan**. Narrow the width and move the image's centre to the left.
+    - ✅ No plugin needed and easy to automate.
+    - ❌ Narrowing too much makes it sound like mono in the middle.
+    - 💡 Avoid the default **Balance** pan for this. It just turns the right channel down, which leaves a quieter, roomier sound rather than a re-centred one.
+  </TabItem>
+  <TabItem label="Rebuild from two channels">
+    For when the left channel is mostly echo. Duplicate the track twice. On one, set the channel strip's **input format** button to **Right** (one channel only) and pan it **slightly right of centre**: this is your main "direct" sound. On the other, set the input to **Left**, pan it left, and blend it in low as room ambience.
+    - ✅ The most control: you set direct vs room balance yourself.
+    - ❌ Narrower and less natural. Check mono for phase issues if the pair was spaced.
+  </TabItem>
+  <TabItem label="Leave it">
+    Keep the real position with only a small Spread reduction.
+    - ✅ An honest live document. It's fine for the group's own archive.
+    - ❌ Hard-right singing for three songs is distracting on headphones in a public release.
+  </TabItem>
+</Tabs>
+
+<Aside type="tip">
+Process the three songs **together**, as one set, so they're consistent with each other. Small differences from the centre songs are OK. Differences *within* the piano set are more noticeable.
+</Aside>
+
+## Next time: avoid the problem at the gig
+- If the group moves for a set, **move or rotate the stand between songs**. Do it during the applause or the piano's intro, or ask the MC for a moment. Note the time.
+- Or put the stand **between the two positions**, aimed between them, if moving isn't possible.
+- Or use a **second pair** near the piano (the H5essential has only two XLR inputs, so this needs a second recorder or an interface).
+- Write the move into the setlist plan before the gig, so it isn't a surprise on the night.
+
+## To learn
+- [ ] Record the dB L/R difference and the settings that worked in the concert log.
+- [ ] Compare Direction Mixer vs the two-channel rebuild on one song and mark ✅ the winner here.

@@ -21,6 +21,7 @@ sidebar:
 - [ ] Hit record **before** the audience settles and leave it running. Splitting is easy later.
 - [ ] Record **30 seconds of room tone** (silence in the room) before or after. It's used for noise reduction and for filling gaps.
 - [ ] Clap or slate at the start.
+- [ ] If the group **moves** (e.g. to the piano), re-aim or move the stand and note the time. See [Off-centre performers](/logic-choir-workflow/tone/off-centre-performers/).
 - [ ] Jot down rough times of songs you'll want, plus any incidents (cough at 23:10, door at 41:00).
 
 ## After
