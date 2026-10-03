@@ -5,7 +5,7 @@ sidebar:
   order: 2
 ---
 
-import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
 
 A cappella relies on dynamics. Over-compressing flattens the musicality. The aim is to keep quiet passages audible on a phone speaker without squashing the climaxes.
 
@@ -15,7 +15,7 @@ A cappella relies on dynamics. Over-compressing flattens the musicality. The aim
     - ✅ The most natural sound. A good default for classical-style repertoire.
   </TabItem>
   <TabItem label="Riding gain (automation)">
-    Use volume automation to lift very quiet sections by 1–3 dB, or tame a sudden fortissimo.
+    Use volume automation to lift very quiet sections by 1–3 dB, or tame a sudden fortissimo of the whole group.
     - ✅ Musical, because you decide where. The classical engineer's approach.
     - ❌ Takes time, but songs are short.
   </TabItem>
@@ -25,3 +25,7 @@ A cappella relies on dynamics. Over-compressing flattens the musicality. The aim
     - ❌ Easy to overdo, and it brings up audience noise in quiet bits.
   </TabItem>
 </Tabs>
+
+<Aside type="note" title="Piercing high notes?">
+If the issue is *particular voices* jumping out on loud high notes, rather than the overall level, use a **dynamic EQ** instead. See [Taming loud high notes](/logic-choir-workflow/tone/dynamic-eq/). This replaced riding volume automation for that job on 2026-10-03.
+</Aside>

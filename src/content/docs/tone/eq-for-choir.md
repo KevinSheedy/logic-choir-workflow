@@ -12,7 +12,7 @@ Small moves only: **±1–3 dB**, wide bands. You're shaping eight voices and a 
 | < 70 Hz | Rumble, not voice | High-pass (see [Rumble](/logic-choir-workflow/cleanup/rumble-and-noise/)) |
 | 100–250 Hz | Bass/baritone body, room boom | Cut 1–3 dB if boomy or muddy |
 | 250–500 Hz | "Boxiness", mud | Gentle wide cut if it sounds congested |
-| 2–5 kHz | Presence, consonants, clarity | Small boost if distant. Cut if harsh (sopranos) |
+| 2–5 kHz | Presence, consonants, clarity | Small boost if distant. If harsh only on loud high notes, use [dynamic EQ](/logic-choir-workflow/tone/dynamic-eq/) |
 | 8–12 kHz | Air, sibilance | Gentle high shelf for sparkle. Watch the "s" sounds |
 
 ## Method

@@ -2,7 +2,7 @@
 title: Stereo width
 description: Checking and adjusting the stereo image.
 sidebar:
-  order: 3
+  order: 4
 ---
 
 - **Check mono**: put Logic's **Direction Mixer** or **Gain** plugin (Mono button) on the stereo output, then flick to mono. If the sound gets hollow or thin, there are phase problems (unlikely with XY).

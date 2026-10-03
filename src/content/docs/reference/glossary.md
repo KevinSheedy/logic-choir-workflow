@@ -10,6 +10,7 @@ sidebar:
 - **dBFS**: decibels relative to digital full scale. 0 dBFS is the fixed-point maximum.
 - **dBTP**: true-peak level, including peaks between samples.
 - **Dither**: low-level noise added when reducing bit depth, to avoid distortion.
+- **Dynamic EQ**: an EQ band that only cuts (or boosts) when that frequency range crosses a threshold. TDR Nova is one example.
 - **HPF (high-pass filter)**: removes frequencies *below* a cutoff.
 - **IR (impulse response)**: a recorded "fingerprint" of a space, used by convolution reverb.
 - **LUFS**: loudness units relative to full scale. Perceived loudness over time.

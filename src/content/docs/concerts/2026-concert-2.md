@@ -23,6 +23,7 @@ Rename this file to `YYYY-MM-DD-venue.md` and fill in the details.
 ## Processing used
 - Clean-up:
 - EQ:
+- Dynamic EQ (TDR Nova band: freq / Q / threshold / max reduction):
 - Dynamics:
 - Reverb:
 - Loudness:
