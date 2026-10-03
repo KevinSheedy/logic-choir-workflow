@@ -55,20 +55,34 @@ TDR Nova's gain-reduction display is a great way to *see* when the singers hit t
 
 ## Worked example: *Seal Lullaby*
 
-![TDR Nova on Seal Lullaby, with Band II selected: bell at 675 Hz, Q 3.01, threshold −15.3 dB, ratio 3.5:1, attack 15 ms, release 120 ms. Band III shows a second dynamic dip higher up.](../../../assets/screenshots/tone/tdr-nova-seal-lullaby-band-2.png)
+Two dynamic bell bands, one an octave above the other, catch the loud high soprano notes.
 
-| Setting | Band II |
-|---|---|
-| Shape | Bell |
-| Frequency | **675 Hz** |
-| Q | 3.01 |
-| Static gain | 0.0 dB (purely dynamic) |
-| Threshold | −15.3 dB |
-| Ratio | 3.5:1 |
-| Attack / Release | 15 ms / 120 ms |
-| Max reduction seen | about 4 dB |
+![TDR Nova on Seal Lullaby, with Band II selected: bell at 675 Hz, Q 3.01, threshold −15.3 dB, ratio 3.5:1, attack 15 ms, release 120 ms, WB on.](../../../assets/screenshots/tone/tdr-nova-seal-lullaby-band-2.png)
 
-**What this taught us:** the problem was the **fundamental** of the high soprano notes, not the 2–4 kHz "harshness" range. 675 Hz is about E5/F5, the top of the soprano line. The Q of about 3 is narrower than the general starting advice, which works here because it targets those specific notes. A second band (III), at roughly 1.3–1.5 kHz, catches the first harmonic. *Band III's settings are to be added from the next screenshot.*
+![TDR Nova on Seal Lullaby, with Band III selected: bell at 1348 Hz, Q 3.00, threshold −15.6 dB, ratio 3.5:1, attack 15 ms, release 120 ms, WB off.](../../../assets/screenshots/tone/tdr-nova-seal-lullaby-band-3.png)
+
+| Setting | Band II | Band III |
+|---|---|---|
+| Shape | Bell | Bell |
+| Frequency | **675 Hz** | **1348 Hz** |
+| Q | 3.01 | 3.00 |
+| Static gain | 0.0 dB | 0.0 dB |
+| Threshold | −15.3 dB | −15.6 dB |
+| Ratio | 3.5:1 | 3.5:1 |
+| Attack / Release | 15 ms / 120 ms | 15 ms / 120 ms |
+| WB (wide band) | **On** | Off |
+| Reduction shown in the screenshot | about 2.5 dB | about 2.5 dB |
+
+Static gain is 0 dB on both bands, so they only cut when triggered. Bands I and IV are enabled but not doing anything here. There's no high- or low-pass, and the dry mix is 0%.
+
+**What this taught us:**
+- The problem was the **fundamental** of the high soprano notes, not the 2–4 kHz "harshness" range. 675 Hz is about E5/F5, near the top of the soprano line.
+- **1348 Hz is exactly one octave up** (2 × 675 Hz). That's the strong second harmonic of the same notes, so the pair of bands treats both the note and its main overtone.
+- A **Q of about 3** is narrower than the general starting advice. It works because it targets specific notes and leaves the rest of the choir alone.
+
+:::caution[Check: WB differs between the bands]
+**WB** (wide band) is on for Band II but off for Band III. In TDR Nova, WB makes the band *listen* at its frequency but turn down the **whole signal** when triggered. That's closer to the old volume-automation approach than to a targeted cut. If that wasn't intentional, try Band II with WB off and compare.
+:::
 
 ## To learn
 - [ ] Record the frequency, threshold and amount that worked, per concert or venue.
