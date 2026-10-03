@@ -40,7 +40,7 @@ import { Steps, Tabs, TabItem, Aside } from '@astrojs/starlight/components';
 
 <Steps>
 1. **Insert** TDR Nova on the song's track, **after** clean-up and EQ and **before** compression and the reverb send. That way the reverb doesn't get the piercing peaks either.
-2. **Find the frequency.** Loop a loud high passage. Enable one band, boost it, and sweep while using the band's solo/listen to find where the piercing sound lives. Soprano harshness is often around **1.5–4 kHz**. The fundamental of very high notes sits around 700 Hz–1.2 kHz. Then set the gain back to 0.
+2. **Find the frequency.** Loop a loud high passage. Enable one band, boost it, and sweep while using the band's solo/listen to find where the piercing sound lives. Check **two places**: the *fundamental* of the high notes (about **600 Hz–1.1 kHz**, which is where it was on [Seal Lullaby](#worked-example-seal-lullaby)) and the *harshness* range (about **1.5–4 kHz**). Then set the gain back to 0.
 3. **Make it dynamic.** Turn on the band's **threshold** (dynamic mode). Use a moderate **Q** (about 1–2) so the cut is not too narrow, and a ratio of about **2–4:1**.
 4. **Set the threshold** so the band only moves on the problem notes. Watch the band's gain-reduction display, which should sit at 0 dB most of the time and dip on the peaks.
 5. **Attack / release.** Use a fairly fast attack (5–15 ms) to catch the note, and a medium release (100–250 ms) so it doesn't pump.
@@ -52,6 +52,23 @@ import { Steps, Tabs, TabItem, Aside } from '@astrojs/starlight/components';
 <Aside type="tip">
 TDR Nova's gain-reduction display is a great way to *see* when the singers hit the problem notes. If it's dipping constantly, the threshold is too low.
 </Aside>
+
+## Worked example: *Seal Lullaby*
+
+![TDR Nova on Seal Lullaby, with Band II selected: bell at 675 Hz, Q 3.01, threshold −15.3 dB, ratio 3.5:1, attack 15 ms, release 120 ms. Band III shows a second dynamic dip higher up.](../../../assets/screenshots/tone/tdr-nova-seal-lullaby-band-2.png)
+
+| Setting | Band II |
+|---|---|
+| Shape | Bell |
+| Frequency | **675 Hz** |
+| Q | 3.01 |
+| Static gain | 0.0 dB (purely dynamic) |
+| Threshold | −15.3 dB |
+| Ratio | 3.5:1 |
+| Attack / Release | 15 ms / 120 ms |
+| Max reduction seen | about 4 dB |
+
+**What this taught us:** the problem was the **fundamental** of the high soprano notes, not the 2–4 kHz "harshness" range. 675 Hz is about E5/F5, the top of the soprano line. The Q of about 3 is narrower than the general starting advice, which works here because it targets those specific notes. A second band (III), at roughly 1.3–1.5 kHz, catches the first harmonic. *Band III's settings are to be added from the next screenshot.*
 
 ## To learn
 - [ ] Record the frequency, threshold and amount that worked, per concert or venue.

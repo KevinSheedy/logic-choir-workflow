@@ -29,3 +29,10 @@ npm run build      # same build that CI runs
 ```
 
 Pages live in `src/content/docs/`. A new file in a section folder shows up in the sidebar automatically. Use `.mdx` when you need components such as `<Tabs>`, and plain `.md` otherwise. See the [Starlight docs](https://starlight.astro.build/) for components.
+
+## Adding screenshots
+
+- Copy a screenshot to the clipboard (**Cmd‑Ctrl‑Shift‑4**) and paste it into the Claude Code prompt with a note on where it belongs, or drag in a saved file.
+- Images live in `src/assets/screenshots/<section>/` and are named `plugin-song-detail.png` (e.g. `tdr-nova-seal-lullaby-band-2.png`).
+- In a page, use `![alt text describing the settings](../../../assets/screenshots/<section>/file.png)`. Astro optimises the image at build time.
+- The repo is public, so crop out anything personal.
