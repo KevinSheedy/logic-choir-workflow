@@ -12,7 +12,7 @@ sidebar:
 
 ## Cutting with handles
 1. Place the playhead about **2–5 seconds before** the first note (the breath and silence matter) and split (`Cmd`‑`T`).
-2. Do the same about **5–10 seconds after** the last note or once the reverb has decayed. Don't cut the natural room tail.
+2. Do the same about **5–10 seconds after** the last note or once the reverb has decayed. Don't cut the natural room tail. Applause usually starts sooner than that. Keep it, and split it into its own region at the first clap (see [Applause and gaps](/logic-choir-workflow/editing/applause-and-gaps/)).
 3. Move each song to its own **track or section** so it can get its own tweaks.
 
 ## Song-to-song consistency

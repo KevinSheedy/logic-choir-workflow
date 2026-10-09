@@ -1,32 +1,64 @@
 ---
 title: Applause and gaps
-description: Options for how each song starts and ends.
+description: Taming loud applause, then choosing how each song starts and ends.
 sidebar:
   order: 2
 ---
 
-import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Tabs, TabItem, Steps, Aside } from '@astrojs/starlight/components';
 
 How a song starts and ends sets the tone: does it sound like a *live record* or a *clean track*?
 
+Our applause is **always very loud**, often louder than anything the choir sings. So the applause gets turned down first, and the house style is chosen after that.
+
+## Why loud applause causes problems
+
+- **Normalising goes wrong.** Logic's *Normalize Region Gain* turns the region up or down so its loudest **peak** hits a set level. If the region includes applause, a clap sets the gain, and the singing ends up too quiet.
+- **Effects still hear the loud applause.** A track's volume fader and its automation come **after** the plugins on the channel. The compressor, dynamic EQ, reverb and limiter react to the full-volume claps even if the automation turns them down. **Region gain** comes **before** the plugins, so that's where the applause should be turned down.
+- **The loudness reading comes out too high.** The Loudness Meter averages everything that plays, applause included, so a song with loud applause reads louder than it is. Streaming services measure the whole file too.
+
+## Taming the applause
+
+Do this for each song, **after** the concert-wide gain is set (see [Logic project setup](/logic-choir-workflow/ingest/logic-project-setup/)) and **before** judging any processing or loudness.
+
+<Steps>
+1. **Split at the first clap.** Put the playhead just before the first clap and split (`Cmd`‑`T`), so the applause has its own region.
+2. **Turn the applause region down** with region gain (Region inspector → *Gain*). Start at about **−10 dB**. Adjust by ear until it sounds like the audience in the room, not louder than the choir.
+3. **Crossfade the split** if the applause starts before the final chord has finished. Add a short crossfade of about **50–200 ms** so the drop in level isn't heard as a step. The chord's decay carries on underneath, just quieter.
+4. **Then apply the house style** (below) to the turned-down applause region.
+</Steps>
+
+<Aside type="caution" title="Don't normalise the applause region">
+Normalising an applause region usually turns it **up** to full scale, which is the opposite of what's needed. Turn it down with region gain instead.
+</Aside>
+
+<Aside type="tip">
+If the applause sounds smeared or splashy once it's turned down, lower its reverb send. The singing doesn't need to change.
+</Aside>
+
+## Ending style
+
 <Tabs>
   <TabItem label="Fade out the applause">
-    Let the last chord ring out and the room decay, then **fade in 2–4 s** as the applause starts.
+    Let the last chord ring out and the room decay. Turn the applause region down, then **fade it out over 2–4 s**.
     - ✅ Keeps the live energy without overstaying it. Good for YouTube or the website.
   </TabItem>
   <TabItem label="Cut before applause">
     End at the natural decay, just before the first clap. Use **room tone** to extend the tail if the applause starts too soon.
     - ✅ A clean "studio-like" track for streaming.
-    - ❌ Hard if applause overlaps the final chord.
+    - ❌ Hard if applause overlaps the final chord. In that case, use the turned-down applause with a short fade instead.
   </TabItem>
   <TabItem label="Keep full applause">
-    The whole applause, with a fade at the end.
+    The whole applause, turned down, with a fade at the end.
     - ✅ A full live document. Good for the group's own archive.
+    - ❌ Long applause at full level would dominate, so always turn it down first.
   </TabItem>
 </Tabs>
 
 ## Starts
-Start on silence or room tone about 0.5–1 s before the first breath or pitch note. Cut the announcements and pitch-pipe *unless* they add charm.
+Start on silence or room tone about 0.5–1 s before the first breath or pitch note. Cut the announcements and pitch pipe *unless* they add charm. If there's applause from the previous song or the walk-on, cut it or fade it in under the room tone.
 
 ## To learn
 - [ ] Decide a house style for Ascolta releases (mark ✅ here once chosen).
+- [ ] Note the applause region gain that sounds right, and see whether it stays similar between concerts.
+- [ ] Check whether Logic's *Normalize Region Gain* takes region fades into account.

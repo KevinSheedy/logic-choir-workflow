@@ -22,6 +22,6 @@ A cappella doesn't need to hit −14. Streaming services turn loud songs *down* 
 **Across a concert, keep songs consistent.** Quiet ballads should sound quieter than up-tempo songs. Don't normalise every song to the same LUFS. Set them by ear relative to each other.
 
 ## In Logic
-1. Put the **Loudness Meter** (Metering) on the Stereo Out and play the whole song, then read *Integrated*.
+1. Put the **Loudness Meter** (Metering) on the Stereo Out. Set a cycle region from the first note to the end of the decay, **leaving out the applause**, then play it and read *Integrated*. Applause would make the reading too high.
 2. Add **Adaptive Limiter** last on the Stereo Out: *Out Ceiling* **−1.0 dB**, with *True Peak Detection* on. Raise the *Gain* until the target is reached, keeping the limiting light (≤ 2–3 dB).
-3. Recheck the integrated level.
+3. Recheck the integrated level on the song only. Then play the **whole file**, applause included, and check that the true peak stays at or below −1 dBTP.
