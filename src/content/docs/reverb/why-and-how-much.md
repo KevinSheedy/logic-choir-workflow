@@ -11,7 +11,7 @@ The mics already captured the room. Reverb in post is for:
 - **Hiding** edits and noise reduction artefacts.
 
 ## Setup in Logic (send/return)
-1. Create an **Aux** via a **Send** on the concert track (Bus 1). Put the reverb on the Aux at **100% wet**.
+1. Create an **Aux** via a **Send** on the concert track (Bus 1). Put the reverb on the Aux at **100% wet**. Our reverb is now **LiquidSonics Seventh Heaven** (see [Current choice](/logic-choir-workflow/reverb/third-party-options/#-current-choice)).
 2. Set the send level to taste. Start low and bring it up until you *notice* the reverb, then back off a little.
 3. EQ the reverb return: high-pass about 200 Hz and gently roll off above 8–10 kHz, which keeps it from muddying or hissing.
 

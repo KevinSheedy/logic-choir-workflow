@@ -16,7 +16,7 @@ Reverbs all sound good alone. The question is which one sounds best **on our rec
 
 ## Scoring sheet (1–5)
 
-| Criterion | ChromaVerb | Space Designer | Candidate A | Candidate B |
+| Criterion | ChromaVerb | Space Designer | Seventh Heaven | Candidate B |
 |---|---|---|---|---|
 | Natural / blends with the real room | | | | |
 | Clarity of words | | | | |
