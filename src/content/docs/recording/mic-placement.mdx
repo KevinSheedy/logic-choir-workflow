@@ -1,57 +1,157 @@
 ---
 title: Mic placement
-description: Stereo techniques for a small a cappella group, and what the current 90° setup is.
+description: Stereo technique, distance and height for one row of 8 singers, and the planned boom-stand setup.
 sidebar:
   order: 3
 ---
 
 import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
 
-Current setup: **two sE8s on one stand, a few metres from the singers, angled about 90° apart.**
-If the capsules nearly touch, that's an **XY** pair. If they're about 17 cm apart, it's closer to **ORTF**. Check this next time, because it changes how the stereo image sounds.
+**Last concert:** two sE8s about 90° apart, on the centre camera stand at camera height (about 1.6 m), about 4 m from the row. That kept them out of the shot, but it was too low. See the [shared boom stand](#planned-shared-boom-stand-km-21021) plan below.
+
+**Recommended from now on:** **ORTF** (capsules **17 cm** apart, angled **110°**) on the end of a boom, about **2.5–2.8 m** high and about **3.5 m** from the row.
+
+## Choosing the stereo technique
+
+### What "recording angle" means
+
+Stand behind the mic pair and look along its centre line. The **recording angle** is the wedge in front of the pair that gets spread across the stereo image:
+
+- A singer **straight ahead**, on the centre line, sounds **dead centre**.
+- A singer at the **edge** of the wedge sounds **fully left** or **fully right**, coming from one speaker only.
+- A singer **outside** the wedge also sounds fully left or right, because nothing can sound wider than one speaker. Singers out there pile up at the edges.
+
+It works like a camera's field of view, except that the "picture" is the space between the two speakers.
+
+The recording angle is set by the **spacing and the angle between the two mics**, working together. It is **not** the angle between the mics, which is 110° for ORTF, and it isn't where they point. Closer spacing or a wider angle between the mics gives a wider recording angle.
+
+### Matching it to the row
+
+- If the recording angle is much **wider** than the row, the singers bunch into the middle of the stereo image.
+- If it's **narrower** than the row, the end singers get pushed to the far left and right, and the middle can sound hollow.
+- Aim for a recording angle **a little wider** than the row. Then the row fills most of the width, with the end singers just inside the edges.
+
+### How wide the row looks from the boom
+
+The singers always stand in **one row** of 8, about 5 m wide shoulder to shoulder or 6 m with small gaps. From mics about 2.7 m high and 3.5 m out (about 3.7 m from mouth height at the centre of the row):
+
+| Row width | Angle the row spans at the mics |
+|---|---|
+| ≈ 5 m | **≈ 68°** |
+| ≈ 6 m | **≈ 78°** |
+
+Moving the mics closer makes the row span a wider angle. Moving them further back makes it narrower.
+
+### Recording angles for a cardioid pair
+
+These are standard published figures for pairs of cardioid mics like the sE8s, and they're approximate.
+
+| Technique | Spacing / angle | Recording angle | Result for this row |
+|---|---|---|---|
+| XY | 0 cm / 90° | well over 120° | The row fills only the middle half of the image. This is the bunching heard so far. |
+| XY wide | 0 cm / 120° | still over 120° | Better, but still narrow. |
+| **ORTF** | **17 cm / 110°** | **≈ 95°** | **The row fills most of the width, with the end singers just inside the edges. Recommended.** |
+| NOS | 30 cm / 90° | ≈ 80° | The row fills the full width, with the end singers at the far left and right. Use it if ORTF sounds narrow or the mics end up further back. |
+
+**A bonus with ORTF:** each mic points about 55° to the side, so the end singers are nearly straight in front of a mic. The centre singers are slightly closer to the mics but off to the side of both. Those two effects roughly cancel, so the middle and the ends of the row come out at similar levels.
+
+### Where the mics point
+
+Seen from above, with ORTF and a 5 m row:
+
+<figure>
+<svg viewBox="0 0 600 400" role="img" aria-labelledby="ortf-title ortf-desc" style="width:100%;height:auto;max-width:600px;color:var(--sl-color-white)">
+  <title id="ortf-title">ORTF pair aimed at a row of 8 singers, seen from above</title>
+  <desc id="ortf-desc">The pair's centre line points at the middle of the row. The row spans about 68 degrees, the recording angle is about 95 degrees, and each mic points 55 degrees out from the centre line, past the end singer on its side.</desc>
+  <path d="M300 330 L22 80 L578 80 Z" fill="var(--sl-color-accent)" opacity="0.12" />
+  <line x1="300" y1="330" x2="22" y2="80" stroke="var(--sl-color-accent)" stroke-width="1.5" stroke-dasharray="6 4" />
+  <line x1="300" y1="330" x2="578" y2="80" stroke="var(--sl-color-accent)" stroke-width="1.5" stroke-dasharray="6 4" />
+  <line x1="300" y1="330" x2="132" y2="80" stroke="currentColor" stroke-width="1" opacity="0.5" />
+  <line x1="300" y1="330" x2="468" y2="80" stroke="currentColor" stroke-width="1" opacity="0.5" />
+  <line x1="300" y1="330" x2="300" y2="80" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 4" />
+  <g fill="currentColor">
+    <circle cx="132" cy="80" r="9" /><circle cx="180" cy="80" r="9" /><circle cx="228" cy="80" r="9" /><circle cx="276" cy="80" r="9" />
+    <circle cx="324" cy="80" r="9" /><circle cx="372" cy="80" r="9" /><circle cx="420" cy="80" r="9" /><circle cx="468" cy="80" r="9" />
+  </g>
+  <defs>
+    <marker id="ortf-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="currentColor" />
+    </marker>
+  </defs>
+  <line x1="294" y1="330" x2="171" y2="244" stroke="currentColor" stroke-width="2.5" marker-end="url(#ortf-arrow)" />
+  <line x1="306" y1="330" x2="429" y2="244" stroke="currentColor" stroke-width="2.5" marker-end="url(#ortf-arrow)" />
+  <rect x="286" y="324" width="12" height="12" rx="2" fill="currentColor" />
+  <rect x="302" y="324" width="12" height="12" rx="2" fill="currentColor" />
+  <g fill="currentColor" font-size="15" font-family="inherit">
+    <text x="300" y="56" text-anchor="middle">Row of 8 singers (≈ 5 m)</text>
+    <text x="300" y="362" text-anchor="middle">ORTF pair: 17 cm apart, 110° between them</text>
+    <text x="300" y="386" text-anchor="middle" opacity="0.75">Pair's centre line → middle of the row</text>
+    <text x="150" y="232" text-anchor="end">L mic: 55° out</text>
+    <text x="450" y="232">R mic: 55° out</text>
+    <text x="310" y="112" opacity="0.75">Row spans ≈ 68°</text>
+  </g>
+  <text x="590" y="56" text-anchor="end" fill="var(--sl-color-accent)" font-size="15" font-family="inherit">Recording angle ≈ 95°</text>
+</svg>
+<figcaption>Seen from above, not to scale for the mics. The shaded wedge is the recording angle. Both end singers are inside it, so they sound near, but not at, the left and right edges.</figcaption>
+</figure>
+
+- **Point the pair, not the mics, at the singers.** The pair's centre line, halfway between the two mics, points at the **middle of the row**, between singers 4 and 5.
+- **Each mic points 55° out from that line**, which is **past the end singer** on its side. The end singers are about 34° out, so each mic is aimed about 20° beyond the end of the row. That's correct for ORTF. **Don't angle the mics in to point at the end singers.** That changes the angle between them, and with it the recording angle.
+- **Tilt the whole pair down about 15–20°**, so the centre line meets the row at **mouth height**. Seen from the side, the mics look slightly down at the singers' faces, not at their feet.
+- **If the row isn't centred** on the stand (for example, songs by the piano), turn the whole pair so the centre line points at the middle of the row where it is now. See [Off-centre performers](/logic-choir-workflow/tone/off-centre-performers/).
 
 <Tabs>
-  <TabItem label="XY (coincident)">
-    Capsules touching, one above the other, angled **90–135°**.
-    - ✅ Mono-compatible and focused, with no phasing problems.
-    - ❌ Can sound narrow. At 90° the group bunches into the centre.
-    - 💡 Try **110–120°** to widen the image, or move closer.
+  <TabItem label="ORTF (recommended)">
+    Capsules **17 cm** apart, angled **110°** outward.
+    - ✅ Fits the boom geometry. Wide, natural and airy. A common choice for choirs.
+    - ✅ Little change when played in mono.
+    - 💡 Needs a stereo bar.
   </TabItem>
-  <TabItem label="ORTF (near-coincident)">
-    Capsules **17 cm apart**, angled **110°** outward.
-    - ✅ A wider, more "airy" image than XY, with a natural sense of space. A common choice for choirs.
-    - ❌ Slightly less mono-solid, though fine in practice.
-    - 💡 Needs a stereo bar (cheap) on the stand.
+  <TabItem label="NOS">
+    Capsules **30 cm** apart, angled **90°**.
+    - ✅ Wider image than ORTF. Good if the mics are further back.
+    - ❌ Can sound slightly thinner when played in mono. Check with the mono test below.
+    - 💡 Needs a stereo bar at least 30 cm long.
+  </TabItem>
+  <TabItem label="XY">
+    Capsules touching, one above the other, angled **90–135°**.
+    - ✅ No change at all in mono, and easy to set up.
+    - ❌ Too narrow at this distance. The row bunches into the centre.
   </TabItem>
   <TabItem label="Spaced pair (AB)">
-    Two mics **60 cm–1 m+ apart**, both facing the group.
+    Two mics **60 cm–1 m+** apart, both facing the row.
     - ✅ Very wide and spacious, with good low end.
-    - ❌ Vague centre image and phase issues in mono. Usually needs two stands.
+    - ❌ Vague centre image and problems in mono. Usually needs two stands, so it doesn't suit the boom plan.
   </TabItem>
 </Tabs>
 
 ## Distance and height
 
-- **Distance**: the critical distance is where the direct sound equals the room's reverb. Closer gives a drier, clearer sound with less room. For 8 singers, 2–4 m is typical. Adding reverb later is easy, removing it is impossible, so **err slightly close**.
-- **Height**: raise the mics above the singers' heads (about 2.5–3 m), aimed down at the middle of the group. This evens out front and back rows and gets above the audience.
-- **Centre** the stand on the group, not on the room.
+- **Distance**: the critical distance is where the sound arriving directly from the singers is as loud as the room's reverb. Closer gives a drier, clearer sound with less room. For 8 singers, **2–4 m** is typical. Adding reverb later is easy, but removing it is impossible, so **err slightly close**.
+- **Height**: about **2.5–3 m**, above the singers' heads. This gets the mics above the audience and their noise, gives a clear line to every singer, and avoids the floor bounce described below.
+- **Aim** the pair's centre line at **mouth height in the middle of the row**, tilted down about **15–20°**, not at the floor. See [Where the mics point](#where-the-mics-point).
+- **Centre** the stand on the row, not on the room.
 
-<Aside type="tip">
-Clap once in front of the mics at the start. It makes a clean sync point and a quick check on the stereo image (the clap should sit dead centre).
+<Aside type="caution" title="Avoid low mics">
+"Low but not on the floor" (about 0.3–1 m) is the worst height. Sound bouncing off the floor arrives just after the direct sound and gives a hollow, phasey tone. At 2.5 m or more, this isn't a problem.
+</Aside>
+
+<Aside type="tip" title="Clap check">
+At the start, clap at the **centre** of the row, where all three cameras can see it. This gives a sync point, and the clap should sound dead centre. At a rehearsal, also clap at **each end**. The audience's left end should come out of the left channel, and both ends should sound near the edges of the image.
 </Aside>
 
 ## Planned: shared boom stand (K&M 21021)
 
-At the last concert the mics were mounted at camera height on the camera stand, to keep them out of the shot. That put them too low. The plan is to buy a **K&M 21021** boom stand and use **one stand for both**:
+The plan is to buy a **K&M 21021** boom stand and use **one stand for both**:
 
 - **iPhone on the upright**, clamped at about **1.6 m** (eye level). This is the centre camera, at the same spot as now (see [Camera placement](/logic-choir-workflow/recording/camera-placement/)).
-- **sE8 pair on the boom arm**, on the stereo bar at the far end, with the boom raised and reaching **towards the singers**.
+- **sE8 pair in ORTF on the boom arm**, on the stereo bar at the far end, with the boom raised and reaching **towards the singers**.
 
 Approximate specs (they vary slightly between retailers, so check the actual stand): upright **about 1.1–2.0 m**, boom **about 1.07 m**.
 
 ### Why it works
 
-- **Higher.** With the upright at full height (about 2.0 m) and the boom angled up, the mics end up around **2.5–2.8 m**. That's the height recommended above, so they're above the singers' heads and above the audience.
+- **Higher.** With the upright at full height (about 2.0 m) and the boom angled up, the mics end up around **2.5–2.8 m**.
 - **Closer.** The boom puts the mics up to about **0.5–0.9 m** in front of the camera, depending on the angle and how much boom sits behind the clamp. With the camera at about 4.3 m, the mics end up at about **3.5 m**, inside the 2–4 m range.
 - **Out of shot.** At eye level and level, the 1x lens sees only about 23° above the horizontal. The boom starts at about 2.0 m, right above the phone, and the mics are high up and in front, so all of it is well above the top of the frame.
 
@@ -59,15 +159,29 @@ Approximate specs (they vary slightly between retailers, so check the actual sta
 
 1. Put the stand at the centre camera's marked spot, with **one tripod leg pointing forward** under the boom so it doesn't tip.
 2. Set the upright height first, then clamp the phone at about 1.6 m using a phone holder that clamps onto the mic stand.
-3. Mount the stereo bar and both sE8s on the end of the boom. Raise the boom and aim the mics down at the middle of the row.
-4. Run the XLR cables along the boom and down the upright **behind** the phone, then tape them down at the base.
-5. Check the iPhone's shot. No boom, mic, cable or clip should be in frame, including at the top edge.
+3. Mount the stereo bar across the end of the boom, **left to right** and at a right angle to the boom.
+4. Fit both sE8s at **17 cm** apart, measured between the **front grilles** (not the bodies or clips), angled **110°**, which is 55° each side of straight ahead and pointing outward.
+5. Raise the boom and aim the pair's centre line at the middle of the row, tilted down about **15–20°** to mouth height. Each mic should point a little past the end singer on its side.
+6. Standing behind the stand and facing the choir, plug the **left-pointing mic into input 1 (left)** and the right-pointing mic into input 2 (right).
+7. Run the XLR cables along the boom and down the upright **behind** the phone, then tape them down at the base.
+8. Check the iPhone's shot. No boom, mic, cable or clip should be in frame, including at the top edge.
+
+<Aside type="tip" title="Stereo bar">
+Get a bar that reaches **30 cm or more**, so it can switch between ORTF and NOS. Mark **17 cm** and **30 cm** on it with tape so setup is quick.
+</Aside>
 
 <Aside type="caution" title="One stand means shared vibration">
 Anything that touches the phone (tapping record, adjusting the framing) goes straight up the stand into the mics. **Start the iPhone before the clap and don't touch the stand during the concert.** If knocks still come through, shock mounts for the sE8s will help.
 </Aside>
 
+## Rehearsal test: ORTF vs NOS
+
+1. Record one song in ORTF and the same song in NOS, from the same position.
+2. Listen on headphones and on speakers. Check how wide the row sounds and whether the end singers are too far out at the edges.
+3. In Logic, switch the output to **mono** for a moment on both. ORTF should barely change. If NOS sounds noticeably thinner or hollower in mono, stick with ORTF.
+4. Note the result in the [changelog](/logic-choir-workflow/reference/changelog/).
+
 ## To learn
-- [ ] Note which technique was actually used for each concert in the concert log.
-- [ ] Experiment: XY 90° vs ORTF at a rehearsal and compare.
+- [ ] Note the technique, spacing and angle actually used for each concert in the concert log.
 - [ ] Once the K&M 21021 arrives, note the mic height and distance actually reached with the boom.
+- [ ] Run the ORTF vs NOS rehearsal test.
