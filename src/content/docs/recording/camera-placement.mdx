@@ -1,0 +1,84 @@
+---
+title: Camera placement
+description: Where to put the three iPhones (one centre, two side) so the edit has a wide shot plus two extra angles.
+sidebar:
+  order: 2
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+Current setup: **three iPhones on tripods**. The **centre** camera holds a wide shot of all 8 singers on the main 1x lens for the whole concert. Two **side** cameras give extra angles to cut to in the edit.
+
+The singers always stand in **one row**.
+
+Place the cameras **before** the mics. The camera spots are fixed by what each one needs to see. The mics then go wherever sounds best while staying out of all three shots. See [Mic placement](/logic-choir-workflow/recording/mic-placement/).
+
+## Centre camera
+
+This is the safety shot. If the side angles don't work for a moment, the edit can always come back to it, so it must always show everyone.
+
+### Distance
+
+The 1x lens is roughly a 24–26 mm equivalent, about 70° across in landscape video. As a working rule:
+
+> **Frame width ≈ 1.4 × distance**
+
+That allows a little for the crop from video stabilisation. Aim for the row to fill about 80% of the width, with some space at each end so nobody gets cut off if they sway or step out.
+
+| Row of 8 | Row width | Frame width | Camera distance |
+|---|---|---|---|
+| Shoulder to shoulder | ≈ 5 m | ≈ 6 m | **≈ 4.3 m** |
+| A small gap between singers | ≈ 6 m | ≈ 7.2 m | **≈ 5 m** |
+
+Measure **from the camera to the row**. Put another way: **distance ≈ 0.85 × row width**. It's better to be slightly too wide than to cut off an end singer, because you can crop later but you can't add back someone who wasn't in the frame.
+
+### Height
+
+- **Lens at about the singers' eye level**: roughly **1.6 m**, plus the stage height if there is one. Keep the phone level so walls and singers stay upright. Tilting a wide lens up or down makes them lean.
+- **Raise it to about 1.8–2 m** if seated audience heads would be in the shot, and tilt down only slightly.
+- In landscape at these distances there's plenty of room above and below. Put the singers' heads about a third of the way down the frame, rather than centring the row vertically.
+
+### Position
+
+- **On the row's centre line**, facing it square-on. Even a small angle makes the nearer end of the row look bigger.
+- **Mark the spot with tape at rehearsal**, along with the tripod height, so it's quick to set up on the night.
+- **Planned:** the centre iPhone moves onto the upright of a K&M 21021 boom stand, which also holds the mics on its boom. See [Shared boom stand](/logic-choir-workflow/recording/mic-placement/#planned-shared-boom-stand-km-21021).
+
+## Side cameras
+
+The side cameras are for **cutaways**: closer, angled shots of part of the row. They don't need to show everyone.
+
+- **Position**: one on each side, about **2–3 m in front of the row and 1–2 m beyond its end**, turned in about **30–45°**. A side shot only looks different from the centre shot if it's at a clear angle. A camera that faces the row almost square-on gives a shot the edit has no reason to cut to.
+- **Framing**: each camera covers the **half of the row nearest to it** (about 4 singers) on 1x. Seen from an angle, the nearer singers look larger and the far end shrinks away. That's fine for a cutaway, because the centre camera still shows the whole row.
+- **Height**: the same as the centre camera (about eye level), so cutting between angles doesn't feel like a jump up or down.
+- **Lens**: 1x, or 2x if the tripod has to sit further back. Pick one and **don't zoom during the concert**.
+- **Keep them out of the centre shot.** Check from the centre camera that neither side tripod is in its frame, and check each side camera for the other side camera, exit signs and audience faces in the background.
+
+## Settings for all three iPhones
+
+Match these across the phones so the angles cut together cleanly.
+
+- **4K at 30 fps**, which is what we've used so far. **Use the same frame rate on all three.** See the note below about possibly switching to 25 fps.
+- **Stay on the chosen lens the whole time.** Don't pinch-zoom. **Action mode off**, because it crops heavily.
+- **Lock exposure and focus**: press and hold on the singers until **AE/AF Lock** appears, then drag the sun slider down a little so faces and white shirts don't blow out under stage lights.
+- **Matching colour**: the built-in Camera app can't lock white balance, so colour can differ between phones. If the angles don't match in the edit, try a camera app with manual white balance, such as Blackmagic Camera, and set the same value on all three.
+- **Airplane mode** and **Do Not Disturb** on, so a call can't stop the recording.
+- **Power and storage**: plug each phone into a power bank. 4K30 uses roughly 10 GB an hour, so check free space first.
+- **Start all three before the clap and leave them running.** The [clap](/logic-choir-workflow/recording/mic-placement/) at the start, seen by every camera, lines up all three videos with the H5essential audio. The iPhones' own sound is only a backup and a sync reference.
+
+<Aside type="caution" title="Check at rehearsal">
+Before the night, set up all three tripods at the marked spots. Check that both end singers have space beside them in the centre shot, that the side tripods are out of the centre shot, and that the mics are out of all three.
+</Aside>
+
+<Aside type="note" title="To discuss: 25 fps instead of 30 fps">
+Where mains power is 50 Hz, many stage and LED lights pulse 100 times a second. At 30 fps that can show up as **flicker or rolling bands** on video. At 25 fps it divides evenly into the pulsing, so the problem goes away.
+
+- **For 25 fps:** less risk of light flicker, and it matches local TV and video standards.
+- **Against:** past concerts are 30 fps. Mixing frame rates in one project or a compilation needs care. All three phones would have to change together.
+- **Decide by:** checking the existing footage. If there's no visible flicker under the venue's lights, 30 fps is fine. If there is, switch all three phones to 25 fps from the next concert and note it in the changelog.
+</Aside>
+
+## To learn
+- [ ] Measure the actual row width and all three camera positions at the next concert and add them to the concert log.
+- [ ] Note which iPhone models are used. Their 1x lenses (24 or 26 mm) change the distances slightly.
+- [ ] After the next edit, note which side-camera angle got used most, and adjust.

@@ -30,6 +30,12 @@ Float headroom only helps if Logic keeps the extra data. See [Logic project setu
   - For a choir a few metres away, leave the pad **off** and set the HPF to **off or 80 Hz**. The 80 Hz setting tames stage and traffic rumble while keeping basses and baritones intact. With 32-bit float you can also filter later in Logic instead.
 - A matched-ish pair, which is good for stereo imaging.
 
+## K&M 21021 boom stand (planned)
+
+- A tall tripod mic stand with a long boom. Approximate specs: upright about 1.1–2.0 m, boom about 1.07 m, weight about 5.9 kg. Check the exact model before buying, because listings differ slightly.
+- The plan is to use it as **one stand for both** the centre iPhone (on the upright) and the sE8 pair (on the boom), so the mics sit higher and closer without being in shot. See [Shared boom stand](/logic-choir-workflow/recording/mic-placement/#planned-shared-boom-stand-km-21021).
+- Also needed: a phone holder that clamps onto the stand.
+
 ## To learn
 - [ ] Confirm the exact H5essential sample-rate setting used (48 kHz recommended).
 - [ ] Photograph the stand setup at the next gig for the concert log.

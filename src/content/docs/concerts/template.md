@@ -10,6 +10,7 @@ Copy this file to `YYYY-MM-DD-venue.md` and fill it in.
 ## Recording
 - **Date / venue**:
 - **Mic technique & position** (XY/ORTF, angle, distance, height, photo):
+- **Cameras** (centre distance and height; side positions, angle and lens; frame rate):
 - **Recorder settings** (sample rate, mic HPF):
 - **Position changes** (songs sung from a different spot, e.g. by the piano):
 - **Room notes** (size, reverb, noises):
